@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/************************* reseting font size  */
+	font-size: 10px;
+
+	/************************* colors  */
+	--Dark-Gray: hsl(0, 0%, 63%);
+	--Black: hsl(0, 0%, 0%);
+	--White: hsl(0, 0%, 100%);
+	--Very-Dark-Gray: hsl(0, 0%, 27%);
+
+	/************************* font-sizes  */
+	--font-size-st-xxxl: 7rem;
+	--font-size-st-xxl: 5.5rem;
+	--font-size-st-xl: 4rem;
+	--font-size-st-lc: 3.5rem;
+	--font-size-st-l: 3rem;
+	--font-size-st-mc: 2.5rem;
+	--font-size-st-m: 2rem;
+	--font-size-st-sc: 1.5rem;
+	--font-size-st-xs: 1.2rem;
+	--font-size-st-s: 1rem;
+
+	/************************* font-weights  */
+	--extra-light: 200;
+	--light: 300;
+	--regular: 400;
+	--medium: 500;
+	--semi-bold: 600;
+	--bold: 700;
+	--extra-bold: 800;
+	--w-bold: 900;
+
+	/************************* paddings  */
+	--padding-st-xxxl-h: 7rem;
+	--padding-st-xxxl-v: 6rem;
+
+	--padding-st-xxl-h: 6rem;
+	--padding-st-xxl-v: 5rem;
+
+	--padding-st-xl-h: 4rem;
+	--padding-st-xl-v: 3.5rem;
+
+	--padding-st-lc-h: 3.5rem;
+	--padding-st-lc-v: 3rem;
+
+	--padding-st-l-h: 3rem;
+	--padding-st-l-v: 2rem;
+
+	--padding-st-m-h: 2.5rem;
+	--padding-st-m-v: 1.5rem;
+
+	--padding-st-s-h: 1rem;
+	--padding-st-s-v: 1rem;
+
+	/************************* font-family  */
+	--font-family: 'League Spartan', sans-serif;
+}
+
+body {
+	font-family: var(--font-family);
+	line-height: 1.5;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+	justify-content: center;
+	background-color: whitesmoke;
+}
+
+.main-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, min-content);
+	justify-content: center;
+	max-width: 1400px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------	 */
+
+/************************* home-section  */
+
+.second {
+	display: none;
+}
+
+.home {
+	width: 100%;
+	height: 50vh;
+	overflow: hidden;
+	position: relative;
+}
+
+.list,
+li,
+img,
+.list__two,
+.list__two li,
+.list__two img,
+.home__images--container {
+	width: 100%;
+	height: 100%;
+}
+
+.home__images--container {
+	position: absolute;
+}
+
+li,
+.list__two li {
+	position: absolute;
+	top: 0;
+}
+
+.arrows,
+.arrows__two {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: var(--Black);
+	padding: var(--padding-st-m-v) var(--padding-st-l-h);
+	z-index: 999;
+	display: flex;
+	gap: 2rem;
+}
+
+.arrows__two {
+	display: none;
+}
+
+.left,
+.right,
+.left__two,
+.right__two {
+	cursor: pointer;
+}
+
+.nav__logo {
+	position: absolute;
+	top: 0;
+	padding: var(--padding-st-lc-v) var(--padding-st-m-h);
+	display: flex;
+	align-items: center;
+	gap: 7rem;
+	z-index: 9;
+}
+
+.nav__logo--img {
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+}
+
+.nav__title {
+	font-size: var(--font-size-st-mc);
+	color: var(--White);
+	font-weight: var(--medium);
+	cursor: pointer;
+	z-index: 9;
+}
+
+.nav__link {
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--padding-st-lc-v) var(--padding-st-m-h);
+	background-color: var(--White);
+	width: 100%;
+	transition: all 0.5s ease-in-out;
+	transform: scale(0);
+	transform-origin: top;
+	z-index: 9;
+}
+
+.nav__link figure {
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+}
+
+.nav__links {
+	flex-basis: 70%;
+	display: flex;
+	gap: 2rem;
+}
+
+.nav__links p {
+	font-size: var(--font-size-st-sc);
+	font-weight: var(--semi-bold);
+	flex-grow: 1;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+
+.nav__links p:hover {
+	color: green;
+}
+
+.nav__links-two {
+	position: absolute;
+	transform: scale(0);
+	top: 4rem;
+	left: 15rem;
+}
+
+.overlay {
+	position: relative;
+	z-index: 7;
+}
+
+.overlay::before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0 0 0 / 0.75);
+	z-index: 9;
+}
+
+/************************* shop-section  */
+
+.shop {
+	padding: var(--padding-st-l-v) var(--padding-st-l-h);
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	position: relative;
+	background-color: var(--White);
+}
+
+.shop__title {
+	font-size: var(--font-size-st-l);
+	line-height: 1;
+	color: var(--Very-Dark-Gray);
+}
+
+.shop__title span {
+	display: block;
+}
+
+.shop__para,
+.about__desc--title-para {
+	color: var(--Dark-Gray);
+	font-size: var(--font-size-st-xs);
+}
+
+.shop__link {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+}
+
+.shop__link figure {
+	width: 5rem;
+	height: 1rem;
+	cursor: pointer;
+}
+
+.shop__link p,
+.about__desc--title {
+	font-size: var(--font-size-st-sc);
+	letter-spacing: 1rem;
+	color: var(--Very-Dark-Gray);
+	letter-spacing: 1rem;
+}
+
+.shop__link p {
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	padding: var(--padding-st-m-v) var(--padding-st-m-h);
+}
+
+.shop__link p:hover {
+	background-color: green;
+	color: var(--White);
+}
+
+/************************* about-section  */
+.about__desc {
+	display: flex;
+	gap: 1.5rem;
+	flex-direction: column;
+	padding: var(--padding-st-m-h) var(--padding-st-l-h);
+	background-color: var(--White);
+}
+
+.about__desc--title {
+	letter-spacing: 0.7rem;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+/**************************** media-query */
+
+@media screen and (min-width: 600px) {
+	.second {
+		display: block;
+	}
+
+	.first {
+		display: none;
+	}
+
+	.nav__logo--img {
+		display: none;
+	}
+
+	.nav__title {
+		padding: 0 var(--padding-st-m-h);
+	}
+
+	.nav__link {
+		transform: scale(0);
+	}
+
+	.nav__links-two {
+		transition: all 0.5 ease-in-out;
+		transform: scale(1);
+		display: flex;
+		gap: 4rem;
+		font-size: var(--font-size-st-sc);
+		color: var(--White);
+		z-index: 9;
+	}
+
+	.nav__links-two p {
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.nav__links-two p:hover {
+		color: green;
+	}
+
+	.overlay::before {
+		content: none;
+	}
+
+	.shop {
+		padding: var(--padding-st-xl-v) var(--padding-st-xl-h);
+	}
+
+	.shop__title {
+		font-size: var(--font-size-st-lc);
+	}
+
+	.shop__para,
+	.about__desc--title-para {
+		font-size: var(--font-size-st-sc);
+	}
+
+	.arrows__two {
+		display: block;
+		bottom: 27rem;
+		display: flex;
+	}
+
+	.shop__link p,
+	.about__desc--title {
+		font-size: var(--font-size-st-m);
+	}
+
+	img {
+		object-fit: cover;
+	}
+}
+
+@media screen and (min-width: 950px) {
+	.main-container {
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: repeat(2, min-content);
+	}
+
+	.home {
+		grid-column: 1 / 5;
+		grid-row: 1 / 2;
+	}
+
+	.shop {
+		grid-column: 5/ -1;
+		grid-row: 1 / 2;
+		padding: var(--padding-st-xxxl-v) var(--padding-st-xl-h);
+	}
+
+	.about {
+		grid-column: 1 / -1;
+		grid-row: 2 / -1;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: repeat(2, min-content);
+	}
+
+	.about__img--one {
+		grid-column: 1 / 5;
+		grid-row: 1 / 2;
+	}
+
+	.about__desc {
+		padding: var(--padding-st-xl-v) var(--padding-st-l-h);
+		grid-column: 5 / -1;
+		grid-row: 1/ 2;
+		justify-content: center;
+	}
+
+	.about__img--two {
+		grid-column: 1 / -1;
+		grid-row: 2 / -1;
+		height: 50vh;
+	}
+
+	.arrows__two {
+		bottom: 0;
+		left: 0;
+		width: 15rem;
+		height: 7rem;
+	}
+
+	.arrows__two img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.home {
+		height: 60vh;
+	}
+
+	.shop {
+		justify-content: center;
+	}
+
+	.about {
+		grid-template-columns: repeat(10, 1fr);
+	}
+
+	.about__img--one {
+		grid-column: 1 / 4;
+	}
+
+	.about__desc {
+		grid-column: 4 / 8;
+		padding: var(--padding-st-l-v) var(--padding-st-xl-h);
+	}
+
+	.about__img--two {
+		grid-column: 8 / -1;
+		grid-row: 1 / -1;
+		width: 100%;
+		height: 100%;
+	}
+
+	.about__desc,
+	.about__img--one {
+		height: 100%;
+	}
+
+	.shop {
+		padding: 7rem 8rem;
+	}
+}
+
+.frontend-mentor {
+	font-size: var(--font-size-st-m);
+}

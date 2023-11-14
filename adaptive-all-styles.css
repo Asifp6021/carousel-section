@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/************************* reseting font-size  */
+	font-size: 10px;
+
+	/************************* colors  */
+	--Dark-Gray: hsl(0, 0%, 63%);
+	--Black: hsl(0, 0%, 0%);
+	--White: hsl(0, 0%, 100%);
+	--Very-Dark-Gray: hsl(0, 0%, 27%);
+
+	/************************* font-sizes  */
+	--font-size-st-xxxl: 7rem;
+	--font-size-st-xxl: 5.5rem;
+	--font-size-st-xl: 4rem;
+	--font-size-st-lc: 3.5rem;
+	--font-size-st-l: 3rem;
+	--font-size-st-mc: 2.5rem;
+	--font-size-st-m: 2rem;
+	--font-size-st-sc: 1.5rem;
+	--font-size-st-s: 1rem;
+
+	/************************* font-weights  */
+	--extra-light: 200;
+	--light: 300;
+	--regular: 400;
+	--medium: 500;
+	--semi-bold: 600;
+	--bold: 700;
+	--extra-bold: 800;
+	--w-bold: 900;
+
+	/************************* paddings  */
+	--padding-st-xxxl-v: 7rem;
+	--padding-st-xxxl-h: 6rem;
+
+	--padding-st-xxl-v: 6rem;
+	--padding-st-xxl-h: 5rem;
+
+	--padding-st-xl-v: 4rem;
+	--padding-st-xl-h: 3.5rem;
+
+	--padding-st-lc-v: 3.5rem;
+	--padding-st-lc-h: 3rem;
+
+	--padding-st-l-v: 3rem;
+	--padding-st-l-h: 2rem;
+
+	--padding-st-m-v: 2rem;
+	--padding-st-m-h: 1.5rem;
+
+	--padding-st-s-v: 1rem;
+	--padding-st-s-h: 1rem;
+
+	/************************* font-family  */
+	--font-family: 'League Spartan', sans-serif;
+}
+
+body {
+	font-family: var(--font-family);
+	line-height: 1.5;
+}
+
